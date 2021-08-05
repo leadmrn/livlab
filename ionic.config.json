@@ -1,0 +1,7 @@
+{
+  "name": "livlab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
