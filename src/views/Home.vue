@@ -79,10 +79,11 @@ export default {
   },
   methods : {
     ionInput(value){
-      let items = document.querySelectorAll('ion-item');
-      let convertValue = value.toLowerCase();
+      const items = document.querySelectorAll('ion-item');
+      const convertValue = value.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
       items.forEach(item => {
-        const shouldShow = item.textContent.toLowerCase().indexOf(convertValue) > -1;
+        const convertItemValue = item.textContent.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const shouldShow = convertItemValue.indexOf(convertValue) > -1;
         item.style.display = shouldShow ? 'block' : 'none';
       });
     }
