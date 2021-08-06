@@ -41,13 +41,50 @@ export default {
         {
           id: 2,
           name: '110m haies (F)'
+        },
+        {
+          id: 3,
+          name: '4x400m (F)'
+        },
+        {
+          id: 4,
+          name: 'Poids (H)'
+        },
+        {
+          id: 5,
+          name: 'France - Slovénie (Basket H)'
+        },
+        {
+          id: 6,
+          name: 'Boxe - moins de 60 kg (F)'
+        },
+        {
+          id: 7,
+          name: 'Canoë-kayak - K1 200m (H)'
+        },
+        {
+          id: 8,
+          name: 'Omnium (H)'
+        },
+        {
+          id: 9,
+          name: 'Keirin (F) Demi-finales'
+        },
+        {
+          id: 10,
+          name: 'Australie - États-Unis (Football F)'
         }
       ]
     }
   },
   methods : {
     ionInput(value){
-      console.log(value);
+      let items = document.querySelectorAll('ion-item');
+      let convertValue = value.toLowerCase();
+      items.forEach(item => {
+        const shouldShow = item.textContent.toLowerCase().indexOf(convertValue) > -1;
+        item.style.display = shouldShow ? 'block' : 'none';
+      });
     }
   }
 };
