@@ -2,10 +2,10 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Moteur de recherche</ion-title>
+        <ion-title>Jeux Olympiques</ion-title>
       </ion-toolbar>
       <ion-toolbar>
-        <ion-searchbar placeholder="Rechercher un sport" showCancelButton="focus" @ionInput="ionInput($event.target.value)" animated></ion-searchbar>
+        <ion-searchbar placeholder="Rechercher un sport" showCancelButton="focus" @ionInput="ionInput($event.target.value)" cancel-button-text="Retour" animated></ion-searchbar>
       </ion-toolbar>
     </ion-header>
     <ion-content>
